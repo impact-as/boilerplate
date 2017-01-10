@@ -2,19 +2,23 @@
 
 namespace App {
 
-		const settings: ng.IAngularBootstrapConfig = {
-			
-		};
+	const moduleId = 'app';
 
-		//Add imported modules
-		const modules: string[] = [
-			
-		];
+	const settings: ng.IAngularBootstrapConfig = {
 		
-		// .run(App.appRun)
-		// .config(App.appConfig);
+	};
+	
+	let appModule = angular.module(moduleId, []);
+	appModule.run(App.appRun)
+	appModule.config(App.appConfig);
 
-		//Manual bootstrap on document level with imported modules and settings.
-		angular.bootstrap(document, modules, settings);
+	//Add imported modules
+	const modules: string[] = [
+		moduleId,
+		// insert modules
+	];
+
+	//Manual bootstrap on document level with imported modules and settings.
+	angular.bootstrap(document, modules, settings);
 
 }
