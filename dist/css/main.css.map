@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "main.css",
+	"sources": [
+		"../../dev/scss/main.scss",
+		"../../dev/scss/modules/example/_example.scss"
+	],
+	"names": [],
+	"mappings": "ACCA,AAAA,IAAI,AAAC,CACD,UAAU,CAAE,WAAW,CAC1B"
+}
