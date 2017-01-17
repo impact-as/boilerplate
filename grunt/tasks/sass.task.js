@@ -15,7 +15,7 @@ module.exports = function () {
             options: {
                 sourceMap: true, //Consider disabling if compile is slow.
                 sourceComments: true,
-                outputStyle: "nested"
+                outputStyle: "expanded"
             },
             dev: {
                 files: files

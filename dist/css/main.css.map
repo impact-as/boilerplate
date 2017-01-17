@@ -6,5 +6,5 @@
 		"../../dev/scss/modules/example/_example.scss"
 	],
 	"names": [],
-	"mappings": ";ACCA,AAAA,IAAI,CAAC;EACD,UAAU,EAAE,IAAI,GACnB"
+	"mappings": ";ACCA,AAAA,IAAI,CAAC;EACD,UAAU,EAAE,IAAI;EAChB,UAAU,EAAE,iBAAiB;CAChC"
 }
