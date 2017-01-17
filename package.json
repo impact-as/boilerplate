@@ -1,0 +1,39 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "IMPACT Project Boilerplate",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/impact-as/boilerplate.git"
+  },
+  "author": "MAC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/impact-as/boilerplate/issues"
+  },
+  "homepage": "https://github.com/impact-as/boilerplate#readme",
+  "dependencies": {
+    "autoprefixer": "^6.6.1",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-datauri": "^0.4.0",
+    "grunt-newer": "^1.2.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^2.0.0",
+    "grunt-ts": "^6.0.0-beta.11",
+    "jit-grunt": "^0.10.0",
+    "load-grunt-configs": "^1.0.0",
+    "lodash": "^4.17.4",
+    "ng-annotate": "^1.2.1",
+    "time-grunt": "^1.4.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "watch": "^1.0.1"
+  }
+}
