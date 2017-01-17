@@ -4,6 +4,7 @@ var Templates;
 })(Templates || (Templates = {}));
 ///<reference path="./definitions/references.d.ts"/>
 var App;
+///<reference path="./definitions/references.d.ts"/>
 (function (App) {
     function appConfig() {
     }
@@ -11,6 +12,7 @@ var App;
 })(App || (App = {}));
 ///<reference path="./definitions/references.d.ts"/>
 var App;
+///<reference path="./definitions/references.d.ts"/>
 (function (App) {
     function appRun($templateCache) {
     }
@@ -18,6 +20,7 @@ var App;
 })(App || (App = {}));
 ///<reference path="./definitions/references.d.ts"/>
 var App;
+///<reference path="./definitions/references.d.ts"/>
 (function (App) {
     var moduleId = 'app';
     var settings = {};

@@ -15,7 +15,7 @@ module.exports = function () {
                 tsconfig: {
                     overwriteFilesGlob: true,
                     updateFiles: true,
-                    ignoreFiles: false,
+                    ignoreFiles: true,
                     ignoreSettings: false,
                     passThrough: false
                 },
@@ -25,7 +25,7 @@ module.exports = function () {
                     vars.devScriptsPath + "definitions/references.d.ts",
                     vars.devScriptsPath + "**/*.ts"
                 ], //Paths for .ts and .d.ts files
-                out: vars.distScriptsPath + vars.siteName + ".js"
+                out: vars.distScriptsPath + vars.siteName + ".js" //dist file
             }
         },
         //Watch task for ts and template-html files
@@ -44,4 +44,4 @@ module.exports = function () {
             }
         }
     }
-};		
+};

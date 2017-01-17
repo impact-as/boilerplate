@@ -7,4 +7,3 @@ dev/scripts/**/*.js
 
 dev/**/*.*.map
 dist/**/*.*.map
-
