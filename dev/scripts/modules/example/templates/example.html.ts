@@ -1,1 +1,0 @@
-namespace Templates { export const example = '<div>    markup!</div>'; }
