@@ -13,7 +13,7 @@ module.exports = function () {
         sass: {
             //Default options
             options: {
-                sourceMap: true,
+                sourceMap: true, //Consider disabling if compile is slow.
                 sourceComments: true,
                 outputStyle: "nested"
             },
@@ -30,7 +30,14 @@ module.exports = function () {
         },
         //Watch task for sass files
         watch: {
-            
+            scss: {
+                files: [vars.scssPath + "**/*.scss"],
+                tasks: ["sass:dev"],
+                options: {
+                    spawn: false, //Cuts atleast 1 sec off compile time.
+                    interrupt: true
+                }
+            },
         }
     }
 };
