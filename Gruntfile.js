@@ -28,6 +28,7 @@ module.exports = function (grunt) {
     //Add tasks by name (e.g. sass, ts, tslint, etc.).
     addTask("sass");
     addTask("postcss");
+    addTask("ts");
 
     //Init grunt with added tasks.
     grunt.initConfig(tasks);

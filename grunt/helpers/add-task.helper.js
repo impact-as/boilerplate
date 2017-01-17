@@ -25,7 +25,7 @@ module.exports = function (tasksObject) {
         if (typeof taskObject === "object") {
             _.merge(tasksObject, taskObject);
         } else {
-            console.error(`Export from ${taskName} should be either an object or a function returning an object.`);
+            throw new Error(`Export from "${taskName}" task should be either an object or a function returning an object.`);
         }
     }
 

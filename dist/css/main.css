@@ -1,7 +1,7 @@
 /* line 2, dev/scss/modules/example/_example.scss */
 body {
   background: blue;
-  box-shadow: 0 0 0 10px yellow;
+  -webkit-box-shadow: 0 0 0 10px yellow;
+          box-shadow: 0 0 0 10px yellow;
 }
-
 /*# sourceMappingURL=main.css.map */

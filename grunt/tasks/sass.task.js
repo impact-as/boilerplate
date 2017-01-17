@@ -1,6 +1,6 @@
-
-/** grunt-sass task options
+/** grunt-sass task options and watch task setup
  * @see https://github.com/sindresorhus/grunt-sass
+ * @see https://github.com/gruntjs/grunt-contrib-watch
  */
 module.exports = function () {
     const vars = require("../configs/vars.config");
