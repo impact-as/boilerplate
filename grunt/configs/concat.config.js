@@ -1,5 +1,6 @@
-/** grunt-contrib-concat task config and watch task setup.
+/** grunt-contrib-concat task config and watch task setup. This also runs ngAnnotate as part of the concat process.
  * @see https://github.com/gruntjs/grunt-contrib-concat
+ * @see https://github.com/olov/ng-annotate
  */
 module.exports = function (grunt) {
     const ngAnnotate = require("ng-annotate");
@@ -16,15 +17,24 @@ module.exports = function (grunt) {
         concat: {
             options: {
                 sourceMap: true,
-                sourceMapStyle: "inline",
+                sourceMapStyle: "embed",
                 process: function (src, filepath) {
+                    //Run ng-annotate on typescript-generated files only.
                     if (filepath.indexOf(".ts.js") > -1) {
-                        //Run ng-annotate on typescript output.
-                        //You should enabled strict-di for dist build.
                         var annotated = ngAnnotate(src, {
-                            add: true
+                            add: true,
+                            map: {
+                                inline: true
+                            }
                         });
-                        return annotated.src;
+                        if (annotated.errors) {
+                            grunt.log.error("Errors occurred");
+                            for (var i = 0; i < annotated.errors.length; i++) {
+                                grunt.log.error(annotated.errors[i]);
+                            }
+                        } else {
+                            return annotated.src;
+                        }
                     }
                     return src;
                 }

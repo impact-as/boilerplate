@@ -22,6 +22,7 @@ module.exports = function (grunt) {
     //Add tasks by name (e.g. sass, ts, tslint, etc.).
     //NOTE: Load order is important with regards to configs containing the same task-name (like the 'watch' task). I.e. "sass" should load before "postcss" to ensure correct execution order.
     importConfig("watch");
+    importConfig("clean");
     importConfig("sass");
     importConfig("postcss");
     importConfig("ts");

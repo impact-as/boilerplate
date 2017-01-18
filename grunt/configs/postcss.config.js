@@ -34,9 +34,15 @@ module.exports = function () {
                     })
                 ]
             },
-            all: {
+            dev: {
                 src: [vars.cssPath + vars.siteName + ".css"]
-            }
+            },
+            dist: {
+                options: {
+                    map: false
+                },
+                src: [vars.cssPath + vars.siteName + ".css"]
+            },
         },
         //Watch task for sass files (also present in sass.task.js)
         watch: {

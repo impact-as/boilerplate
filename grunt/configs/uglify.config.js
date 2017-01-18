@@ -10,8 +10,6 @@ module.exports = function (grunt) {
     return {
         uglify: {
             options: {
-                sourceMap: true,
-                sourceMapIncludeSources: true,
                 preserveComments: false
             },
             dist: {

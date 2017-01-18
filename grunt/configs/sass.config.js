@@ -11,17 +11,17 @@ module.exports = function () {
 
     return {
         sass: {
-            //Default options
-            options: {
-                sourceMap: true, //Consider disabling if compile is slow.
-                sourceComments: true,
-                outputStyle: "expanded"
-            },
             dev: {
+                options: {
+                    sourceMap: true, //Consider disabling if compile is slow.
+                    sourceComments: true,
+                    outputStyle: "expanded"
+                },
                 files: files
             },
             dist: {
                 options: {
+                    sourceMap: false,
                     sourceComments: false,
                     outputStyle: "compressed"
                 },
