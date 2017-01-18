@@ -5,11 +5,11 @@ module.exports = {
     siteName: "main",
     devPath: "dev/",
     distPath: "dist/",
+    viewsPath: "", //Razor views
     get devScriptsPath() { return this.devPath + "scripts/" },
     get distScriptsPath() { return this.distPath + "scripts/" },
-    get templateOutPath() { return this.devScriptsPath + "html2ts/" },
     get devGraphicsPath() { return this.devPath + "graphics/" },
     get devGraphicsPath() { return this.distPath + "graphics/" },
     get scssPath() { return this.devPath + "scss/" },
     get cssPath() { return this.distPath + "css/" }
-}
+};

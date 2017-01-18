@@ -13,12 +13,6 @@ module.exports = function (grunt) {
      */
     require("jit-grunt")(grunt, {});
 
-    //Load custom tasks (e.g. dev, qa, prod, etc.).
-    require("./grunt/tasks/default.task")(grunt);
-    require("./grunt/tasks/dev.task")(grunt);
-    require("./grunt/tasks/qa.task")(grunt);
-    require("./grunt/tasks/prod.task")(grunt);
-
     //Object to hold all grunt task configs.
     let taskConfigs = {};
 
@@ -27,10 +21,20 @@ module.exports = function (grunt) {
 
     //Add tasks by name (e.g. sass, ts, tslint, etc.).
     //NOTE: Load order is important with regards to configs containing the same task-name (like the 'watch' task). I.e. "sass" should load before "postcss" to ensure correct execution order.
+    importConfig("watch");
     importConfig("sass");
     importConfig("postcss");
     importConfig("ts");
     importConfig("tslint");
+
+    //Load custom tasks (e.g. dev, qa, prod, etc.).
+    require("./grunt/tasks/default.task")(grunt);
+
+    require("./grunt/tasks/dev.task")(grunt);
+    require("./grunt/tasks/qa.task")(grunt);
+    require("./grunt/tasks/prod.task")(grunt);
+
+    require("./grunt/tasks/livereload.task")(grunt, taskConfigs);
 
     //Init grunt with added tasks.
     grunt.initConfig(taskConfigs);

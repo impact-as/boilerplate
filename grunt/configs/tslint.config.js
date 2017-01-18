@@ -7,26 +7,24 @@
 module.exports = function (grunt) {
     const vars = require("../settings/vars.setting");
 
+    const src = [
+        vars.devScriptsPath + "**/*.ts",
+        "!**/templates/**",
+        "!**/3rdparty/**",
+        "!**/node_modules/**"
+    ];
+
     return {
         tslint: {
             options: {
                 configuration: grunt.file.readJSON("tslint.json")
             },
-            files: {
-                src: [
-                    vars.devScriptsPath + "**/*.ts",
-                    "!**/templates/**",
-                    "!**/3rdparty/**",
-                    "!**/node_modules/**"
-                ]
-            }
+            files: { src: src }
         },
         // Watch task for ts files (also present in ts.task.js)
         watch: {
-            scripts: {
-                files: [
-                    vars.devScriptsPath + "**/*.ts"
-                ],
+            lint: {
+                files: { src: src },
                 tasks: ["newer:tslint"],
                 options: {
                     spawn: true, //This should be "true", otherwise the watcher exits when interrupting.
@@ -34,5 +32,5 @@ module.exports = function (grunt) {
                 }
             }
         }
-    }
+    };
 };

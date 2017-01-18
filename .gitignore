@@ -1,12 +1,16 @@
+# IDE Files
+.vscode
+
+# NODE Related
 node_modules
 !dev/scripts/definitions/node_modules
 .tscache
 tscommand-*.tmp.txt
 
+# SCRIPT Related
 dev/scripts/**/*.html.ts
 dev/scripts/**/*.js
 !dev/scripts/3rdparty/**/*.js
 
 dev/**/*.*.map
 dist/**/*.*.map
-

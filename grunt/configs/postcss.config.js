@@ -1,4 +1,4 @@
-/** postcss task config (includes autoprefixer) and watch task setup
+/** grunt-postcss task config (includes autoprefixer) and watch task setup
  * @see https://github.com/nDmitry/grunt-postcss
  * @see https://github.com/postcss/autoprefixer
  * @see https://github.com/gruntjs/grunt-contrib-watch
@@ -49,5 +49,5 @@ module.exports = function () {
                 }
             }
         }
-    }
+    };
 };
