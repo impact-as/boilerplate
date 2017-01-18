@@ -27,6 +27,7 @@ module.exports = function (grunt) {
     importConfig("ts");
     importConfig("tslint");
     importConfig("concat");
+    importConfig("uglify");
 
     //Load custom tasks (e.g. dev, qa, prod, etc.).
     require("./grunt/tasks/default.task")(grunt);

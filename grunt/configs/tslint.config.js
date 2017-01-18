@@ -21,16 +21,17 @@ module.exports = function (grunt) {
             },
             files: { src: src }
         },
-        // Watch task for ts files (also present in ts.task.js)
-        watch: {
-            lint: {
-                files: { src: src },
-                tasks: ["newer:tslint"],
-                options: {
-                    spawn: true, //This should be "true", otherwise the watcher exits when interrupting.
-                    interrupt: true //Task is relatively slow, so interrupting is nice.
-                }
-            }
-        }
+        // Watch task for ts files.
+        // NOTE: Currently commented because tslint is very slow. Consider enforcing tslint on git-push only.
+        // watch: {
+        //     lint: {
+        //         files: { src: src },
+        //         tasks: ["newer:tslint"],
+        //         options: {
+        //             spawn: true, //This should be "true", otherwise the watcher exits when interrupting.
+        //             interrupt: true //Task is relatively slow, so interrupting is nice.
+        //         }
+        //     }
+        // }
     };
 };

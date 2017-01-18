@@ -16,28 +16,22 @@ module.exports = function (grunt) {
         concat: {
             options: {
                 sourceMap: true,
-                sourceMapStyle: "inline"
+                sourceMapStyle: "inline",
+                process: function (src, filepath) {
+                    if (filepath.indexOf(".ts.js") > -1) {
+                        //Run ng-annotate on typescript output.
+                        //You should enabled strict-di for dist build.
+                        var annotated = ngAnnotate(src, {
+                            add: true
+                        });
+                        return annotated.src;
+                    }
+                    return src;
+                }
             },
-            dev: {
+            all: {
                 src: src,
                 dest: dest
-            },
-            dist: {
-                src: src,
-                dest: dest,
-                options: {
-                    process: function (src, filepath) {
-                        if (filepath.indexOf(".ts.js") > -1) {
-                            //Run ng-annotate on typescript output.
-                            //You should enabled strict-di for dist build.
-                            var annotated = ngAnnotate(src, {
-                                add: true
-                            });
-                            return annotated.src;
-                        }
-                        return src;
-                    }
-                }
             }
         },
         //Watch task for typescript output (*.ts.js file).
