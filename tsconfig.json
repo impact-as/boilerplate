@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "alwaysStrict": true,
         "allowSyntheticDefaultImports": true,
         "inlineSourceMap": true,
         "module": "system",

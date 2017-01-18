@@ -2,8 +2,9 @@
 
 namespace App {
 
+	//@ngInject
 	export function appRun($templateCache:ng.ITemplateCacheService) {
-
+		$templateCache.put("test", "value");
 	}
     
 }

@@ -25,7 +25,7 @@ module.exports = function () {
                     vars.devScriptsPath + "definitions/references.d.ts",
                     vars.devScriptsPath + "**/*.ts"
                 ], //Paths for .ts and .d.ts files
-                out: vars.distScriptsPath + vars.siteName + ".js" //dist file
+                out: vars.distScriptsPath + vars.siteName + ".ts.js" //dist file
             }
         },
         //Watch task for ts and template-html files (also present in tslint.task.js)

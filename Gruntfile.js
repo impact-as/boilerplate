@@ -26,6 +26,7 @@ module.exports = function (grunt) {
     importConfig("postcss");
     importConfig("ts");
     importConfig("tslint");
+    importConfig("concat");
 
     //Load custom tasks (e.g. dev, qa, prod, etc.).
     require("./grunt/tasks/default.task")(grunt);

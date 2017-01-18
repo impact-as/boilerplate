@@ -5,7 +5,7 @@ namespace App {
 	const moduleId = 'app';
 
 	const settings: ng.IAngularBootstrapConfig = {
-		
+		strictDi: true //Throws error if people forget @ngInject - we wnat this to happen.
 	};
 	
 	let appModule = angular.module(moduleId, []);
@@ -20,5 +20,4 @@ namespace App {
 
 	//Manual bootstrap on document level with imported modules and settings.
 	angular.bootstrap(document, modules, settings);
-
 }
