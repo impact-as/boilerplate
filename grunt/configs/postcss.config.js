@@ -48,7 +48,7 @@ module.exports = function () {
         watch: {
             scss: {
                 files: [vars.scssPath + "**/*.scss"],
-                tasks: ["postcss:all"],
+                tasks: ["postcss:dev"],
                 options: {
                     spawn: false, //Cuts atleast 1 sec off compile time.
                     interrupt: true

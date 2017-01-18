@@ -37,6 +37,7 @@ module.exports = function (grunt) {
     require("./grunt/tasks/qa.task")(grunt);
     require("./grunt/tasks/prod.task")(grunt);
 
+    require("./grunt/tasks/gitpush.task")(grunt);
     require("./grunt/tasks/livereload.task")(grunt, taskConfigs);
 
     //Init grunt with added tasks.

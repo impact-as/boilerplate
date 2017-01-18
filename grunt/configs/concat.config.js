@@ -9,6 +9,7 @@ module.exports = function (grunt) {
     const src = [
         //May need further ordering
         vars.devScriptsPath + "3rdparty/**/*.js",
+        "!" + vars.devScriptsPath + "3rdparty/livereload/*.js",
         vars.distScriptsPath + vars.siteName + ".ts.js",
     ];
     const dest = vars.distScriptsPath + vars.siteName + ".js";
@@ -50,7 +51,7 @@ module.exports = function (grunt) {
                 files: [
                     vars.distScriptsPath + "*.ts.js"
                 ],
-                tasks: ["concat:dev"],
+                tasks: ["concat:all"],
                 options: {
                     spawn: false,
                     interrupt: false
