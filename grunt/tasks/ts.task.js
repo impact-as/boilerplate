@@ -28,15 +28,15 @@ module.exports = function () {
                 out: vars.distScriptsPath + vars.siteName + ".js" //dist file
             }
         },
-        //Watch task for ts and template-html files
+        //Watch task for ts and template-html files (also present in tslint.task.js)
         watch: {
             scripts: {
                 files: [
                     vars.devScriptsPath + "**/*.ts",
                     vars.devScriptsPath + "**/*.html",
-                    "!" + vars.devScriptsPath + "**/*.html.ts"
+                    "!**/templates/**"
                 ],
-                tasks: ["ts:full"],
+                tasks: ["ts:all"],
                 options: {
                     spawn: true, //This should be "true", otherwise the watcher exits when interrupting.
                     interrupt: true //Task is relatively slow, so interrupting is nice.

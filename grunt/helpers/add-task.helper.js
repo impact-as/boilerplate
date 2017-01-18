@@ -16,14 +16,21 @@ module.exports = function (grunt, tasksObject) {
         const taskModule = require(`../tasks/${taskName}.task`)(grunt);
         let taskObject;
 
-        if (typeof taskModule === "function") {
+        if (_.isFunction(taskModule)) {
             taskObject = taskModule();
         } else {
             taskObject = taskModule;
         }
 
-        if (typeof taskObject === "object") {
-            _.merge(tasksObject, taskObject);
+        if (_.isObject(taskObject)) {
+            //Merge config objects.
+            _.mergeWith(tasksObject, taskObject, (objectValue, sourceValue) => {
+                //Custom handling of array-properties.
+                if (_.isArray(objectValue)) {
+                    //Concat and de-duplicate.
+                    return _.union(objectValue, sourceValue);
+                }
+            });
         } else {
             throw new Error(`Export from "${taskName}" task should be either an object or a function returning an object.`);
         }

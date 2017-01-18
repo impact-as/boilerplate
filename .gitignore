@@ -1,6 +1,7 @@
 node_modules
 !dev/scripts/definitions/node_modules
 .tscache
+tscommand-*.tmp.txt
 
 dev/scripts/**/*.html.ts
 dev/scripts/**/*.js
@@ -8,3 +9,4 @@ dev/scripts/**/*.js
 
 dev/**/*.*.map
 dist/**/*.*.map
+

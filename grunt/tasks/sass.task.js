@@ -28,7 +28,7 @@ module.exports = function () {
                 files: files
             }
         },
-        //Watch task for sass files
+        //Watch task for sass files (also present in postcss.task.js)
         watch: {
             scss: {
                 files: [vars.scssPath + "**/*.scss"],
@@ -37,7 +37,7 @@ module.exports = function () {
                     spawn: false, //Cuts atleast 1 sec off compile time.
                     interrupt: true
                 }
-            },
+            }
         }
     }
 };

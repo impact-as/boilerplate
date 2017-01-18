@@ -20,18 +20,19 @@ module.exports = function (grunt) {
                 ]
             }
         },
-        //Watch task for ts and template-html files
-        // watch: {
-        //     scripts: {
-        //         files: [
-        //             vars.devScriptsPath + "**/*.ts"
-        //         ],
-        //         tasks: ["newer:tslint"],
-        //         options: {
-        //             spawn: true, //This should be "true", otherwise the watcher exits when interrupting.
-        //             interrupt: true //Task is relatively slow, so interrupting is nice.
-        //         }
-        //     }
-        // }
+        // Watch task for ts files (also present in ts.task.js)
+        watch: {
+            scripts: {
+                files: [
+                    vars.devScriptsPath + "**/*.ts"
+                ],
+                tasks: ["newer:tslint"],
+                options: {
+                    spawn: true, //This should be "true", otherwise the watcher exits when interrupting.
+                    interrupt: true //Task is relatively slow, so interrupting is nice.
+                }
+            }
+        }
     }
 };
+

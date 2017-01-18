@@ -36,6 +36,17 @@ module.exports = function () {
             all: {
                 src: [vars.cssPath + vars.siteName + ".css"]
             }
+        },
+        //Watch task for sass files (also present in sass.task.js)
+        watch: {
+            scss: {
+                files: [vars.scssPath + "**/*.scss"],
+                tasks: ["postcss:all"],
+                options: {
+                    spawn: false, //Cuts atleast 1 sec off compile time.
+                    interrupt: true
+                }
+            }
         }
     }
 };
