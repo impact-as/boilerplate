@@ -30,7 +30,7 @@ module.exports = function () {
         },
         //Watch task for ts and template-html files (also present in tslint.task.js)
         watch: {
-            scripts: {
+            typesscript: {
                 files: [
                     vars.devScriptsPath + "**/*.ts",
                     vars.devScriptsPath + "**/*.html",

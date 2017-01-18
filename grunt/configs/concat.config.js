@@ -39,6 +39,19 @@ module.exports = function (grunt) {
                     }
                 }
             }
+        },
+        //Watch task for typescript output (*.ts.js file).
+        watch: {
+            javascript: {
+                files: [
+                    vars.distScriptsPath + "*.ts.js"
+                ],
+                tasks: ["concat:dev"],
+                options: {
+                    spawn: false,
+                    interrupt: false
+                }
+            }
         }
     };
 };
