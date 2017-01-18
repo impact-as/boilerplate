@@ -2,6 +2,7 @@ node_modules
 !dev/scripts/definitions/node_modules
 .tscache
 
+dev/scripts/**/*.html.ts
 dev/scripts/**/*.js
 !dev/scripts/3rdparty/**/*.js
 

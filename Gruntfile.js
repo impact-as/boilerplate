@@ -23,12 +23,13 @@ module.exports = function (grunt) {
     let tasks = {};
 
     //Import helper for tasks.
-    const addTask = require("./grunt/helpers/add-task.helper")(tasks);
+    const addTask = require("./grunt/helpers/add-task.helper")(grunt, tasks);
 
     //Add tasks by name (e.g. sass, ts, tslint, etc.).
     addTask("sass");
     addTask("postcss");
     addTask("ts");
+    addTask("tslint");
 
     //Init grunt with added tasks.
     grunt.initConfig(tasks);

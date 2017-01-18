@@ -2,5 +2,5 @@
  * @param {object} grunt - Grunt should be passed to module.
  */
 module.exports = function (grunt) {
-    grunt.registerTask("default", ["sass:dev", "postcss:all", "ts:full"]);
+    grunt.registerTask("default", ["sass:dev", "postcss:all", "ts:all", "tslint"]);
 };

@@ -1,0 +1,26 @@
+{
+    "rules": {
+        "class-name": true,
+        "curly": true,
+        "jsdoc-format": true,
+        "no-bitwise": true,
+        "no-duplicate-variable": true,
+        "trailing-comma": [
+            false,
+            {
+                "singleline": "always",
+                "multiline": "always"
+            }
+        ],
+        "no-unused-expression": true,
+        "semicolon": [
+            true,
+            "always",
+            "ignore-bound-class-methods"
+        ],
+        "triple-equals": [
+            true
+        ],
+        "prefer-for-of": true
+    }
+}

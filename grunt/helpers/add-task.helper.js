@@ -2,7 +2,7 @@
  * @param {object} tasksObject - An empty object to which the tasks will be added.
  * @author MAC
  */
-module.exports = function (tasksObject) {
+module.exports = function (grunt, tasksObject) {
 
     /** lodash for coding happiness
      * @see https://lodash.com/docs/
@@ -13,7 +13,7 @@ module.exports = function (tasksObject) {
      * @param {string} taskName - Name of the task. This must match the task-name used by the 3rd-party module.
      */
     function addTask(taskName) {
-        const taskModule = require(`../tasks/${taskName}.task`);
+        const taskModule = require(`../tasks/${taskName}.task`)(grunt);
         let taskObject;
 
         if (typeof taskModule === "function") {

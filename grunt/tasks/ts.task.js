@@ -11,7 +11,7 @@ module.exports = function () {
                 fast: "never", //Full compile
                 htmlOutputTemplate: "namespace Templates { export const <%= modulename %> = '<%= content %>'; }" //Export template as a string inside the "Templates" namespace.
             },
-            full: {
+            all: {
                 tsconfig: {
                     overwriteFilesGlob: true,
                     updateFiles: true,

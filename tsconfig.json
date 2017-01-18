@@ -20,6 +20,7 @@
         "dev/scripts/app.ts",
         "dev/scripts/definitions/node_modules/@types/angular/index.d.ts",
         "dev/scripts/definitions/node_modules/@types/jquery/index.d.ts",
-        "dev/scripts/modules/example/example.module.ts"
+        "dev/scripts/modules/example/example.module.ts",
+        "dev/scripts/modules/example/templates/example.html.ts"
     ]
 }
