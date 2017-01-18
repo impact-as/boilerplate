@@ -7,3 +7,4 @@
 /// <reference path="node_modules/@types/jquery/index.d.ts" />
 /// <reference path="../modules/example/example.module.ts" />
 //grunt-end
+

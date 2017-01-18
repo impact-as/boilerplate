@@ -1,9 +1,10 @@
-/** postcss task options (includes autoprefixer)
+/** postcss task config (includes autoprefixer) and watch task setup
  * @see https://github.com/nDmitry/grunt-postcss
  * @see https://github.com/postcss/autoprefixer
+ * @see https://github.com/gruntjs/grunt-contrib-watch
  */
 module.exports = function () {
-    const vars = require("../configs/vars.config");
+    const vars = require("../settings/vars.setting");
     const autoprefixer = require("autoprefixer");
 
     return {

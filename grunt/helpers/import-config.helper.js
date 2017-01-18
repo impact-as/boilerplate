@@ -2,29 +2,29 @@
  * @param {object} tasksObject - An empty object to which the tasks will be added.
  * @author MAC
  */
-module.exports = function (grunt, tasksObject) {
+module.exports = function (grunt, taskConfigs) {
 
     /** lodash for coding happiness
      * @see https://lodash.com/docs/
      */
     let _ = require("lodash");
 
-    /** Requires task via taskName.
+    /** Requires task config via taskName and extends the config object with it.
      * @param {string} taskName - Name of the task. This must match the task-name used by the 3rd-party module.
      */
-    function addTask(taskName) {
-        const taskModule = require(`../tasks/${taskName}.task`)(grunt);
-        let taskObject;
+    function importConfig(taskName) {
+        const configModule = require(`../configs/${taskName}.config`)(grunt);
+        let taskConfig;
 
-        if (_.isFunction(taskModule)) {
-            taskObject = taskModule();
+        if (_.isFunction(configModule)) {
+            taskConfig = configModule();
         } else {
-            taskObject = taskModule;
+            taskConfig = configModule;
         }
 
-        if (_.isObject(taskObject)) {
+        if (_.isObject(taskConfig)) {
             //Merge config objects.
-            _.mergeWith(tasksObject, taskObject, (objectValue, sourceValue) => {
+            _.mergeWith(taskConfigs, taskConfig, (objectValue, sourceValue) => {
                 //Custom handling of array-properties.
                 if (_.isArray(objectValue)) {
                     //Concat and de-duplicate.
@@ -36,5 +36,5 @@ module.exports = function (grunt, tasksObject) {
         }
     }
 
-    return addTask;
+    return importConfig;
 };

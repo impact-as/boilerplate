@@ -1,9 +1,9 @@
-/** grunt-sass task options and watch task setup
+/** grunt-sass task config and watch task setup
  * @see https://github.com/sindresorhus/grunt-sass
  * @see https://github.com/gruntjs/grunt-contrib-watch
  */
 module.exports = function () {
-    const vars = require("../configs/vars.config");
+    const vars = require("../settings/vars.setting");
 
     //Final css files need to be defined here
     let files = {};

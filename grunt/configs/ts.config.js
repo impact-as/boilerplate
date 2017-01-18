@@ -1,9 +1,9 @@
-/** grunt-ts task options and watch task setup
+/** grunt-ts task config and watch task setup
  * @see https://github.com/TypeStrong/grunt-ts
  * @see https://github.com/gruntjs/grunt-contrib-watch
  */
 module.exports = function () {
-    const vars = require("../configs/vars.config");
+    const vars = require("../settings/vars.setting");
 
     return {
         ts: {

@@ -1,10 +1,11 @@
-/** grunt-tslint task options and watch task setup
+/** grunt-tslint task config and watch task setup using grunt-newer
  * @see https://github.com/palantir/grunt-tslint
  * @see https://palantir.github.io/tslint/rules/
  * @see https://github.com/gruntjs/grunt-contrib-watch
+ * @see https://github.com/tschaub/grunt-newer
  */
 module.exports = function (grunt) {
-    const vars = require("../configs/vars.config");
+    const vars = require("../settings/vars.setting");
 
     return {
         tslint: {
@@ -35,4 +36,3 @@ module.exports = function (grunt) {
         }
     }
 };
-

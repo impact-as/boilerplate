@@ -9,7 +9,7 @@ namespace App {
 	};
 	
 	let appModule = angular.module(moduleId, []);
-	appModule.run(App.appRun)
+	appModule.run(App.appRun);
 	appModule.config(App.appConfig);
 
 	//Add imported modules
