@@ -1,12 +1,12 @@
 {
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
+        "inlineSourceMap": true,
         "module": "system",
         "moduleResolution": "node",
         "noImplicitAny": false,
         "pretty": true,
         "removeComments": false,
-        "sourceMap": true,
         "target": "es5"
     },
     "filesGlob": [
