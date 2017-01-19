@@ -6,7 +6,7 @@ module.exports = function (grunt) {
     /** Add timer to grunt task execution.
      * @see https://github.com/sindresorhus/time-grunt
      */
-    require("time-grunt")(grunt);
+    // require("time-grunt")(grunt);
 
     /** Load modules "just-in-time" automatically (don't use grunt.loadTask("taskName")).
      * @see https://github.com/shootaroo/jit-grunt
