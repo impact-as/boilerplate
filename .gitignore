@@ -10,5 +10,6 @@ tscommand-*.tmp.txt
 dev/scripts/**/*.html.ts
 dev/scripts/**/*.js
 !dev/scripts/3rdparty/**/*.js
+dev/scripts/3rdparty/livereload
 
 /dist
