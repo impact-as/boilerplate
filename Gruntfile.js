@@ -25,8 +25,8 @@ module.exports = function (grunt) {
     importConfig("clean");
     importConfig("sass");
     importConfig("postcss");
-    importConfig("ts");
     importConfig("tslint");
+    importConfig("ts");
     importConfig("concat");
     importConfig("uglify");
 

@@ -14,8 +14,8 @@ module.exports = function () {
             all: {
                 tsconfig: {
                     overwriteFilesGlob: true,
-                    updateFiles: true,
-                    ignoreFiles: true,
+                    updateFiles: false, //False because ignoreFiles doesn't work.
+                    ignoreFiles: true, //Not actually implemented in module code (I've checked)
                     ignoreSettings: false,
                     passThrough: false
                 },
@@ -30,11 +30,11 @@ module.exports = function () {
         },
         //Watch task for ts and template-html files (also present in tslint.task.js)
         watch: {
-            typesscript: {
+            typescript: {
                 files: [
                     vars.devScriptsPath + "**/*.ts",
                     vars.devScriptsPath + "**/*.html",
-                    "!**/templates/**"
+                    "!" + vars.devScriptsPath + "**/*.html.ts",
                 ],
                 tasks: ["ts:all"],
                 options: {

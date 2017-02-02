@@ -9,9 +9,8 @@ module.exports = function (grunt) {
 
     const src = [
         vars.devScriptsPath + "**/*.ts",
-        "!**/templates/**",
-        "!**/3rdparty/**",
-        "!**/node_modules/**"
+        "!" + vars.devScriptsPath + "3rdparty/**",
+        "!" + vars.devScriptsPath + "definitions/**"
     ];
 
     return {
@@ -22,10 +21,10 @@ module.exports = function (grunt) {
             files: { src: src }
         },
         // Watch task for ts files.
-        // NOTE: Currently commented because tslint is very slow. Consider enforcing tslint on git-push only.
+        //TODO: Test if this is still slow on OSX.
         // watch: {
-        //     lint: {
-        //         files: { src: src },
+        //     typescript: {
+        //         files: src,
         //         tasks: ["newer:tslint"],
         //         options: {
         //             spawn: true, //This should be "true", otherwise the watcher exits when interrupting.
