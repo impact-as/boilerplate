@@ -9,7 +9,7 @@ module.exports = function (grunt) {
     const src = [
         //May need further ordering
         vars.devScriptsPath + "3rdparty/**/*.js",
-        "!" + vars.devScriptsPath + "3rdparty/livereload/*.js",
+        "!" + vars.devScriptsPath + "3rdparty/livereload/**",
         vars.distScriptsPath + vars.siteName + ".ts.js",
     ];
     const dest = vars.distScriptsPath + vars.siteName + ".js";

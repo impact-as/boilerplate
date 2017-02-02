@@ -4,7 +4,6 @@
 /// <reference path="../app.run.ts" />
 /// <reference path="node_modules/@types/angular/index.d.ts" />
 /// <reference path="node_modules/@types/jquery/index.d.ts" />
-/// <reference path="../modules/example/example.module.ts" />
 //grunt-end
 
 // Main app file should be at the bottom of the load order.
