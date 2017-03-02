@@ -13,7 +13,7 @@ module.exports = function (grunt) {
             },
             all: {
                 tsconfig: false,
-                options: grunt.file.readJSON("tsconfig.json").compilerOpstions,
+                options: grunt.file.readJSON("tsconfig.json").compilerOptions,
                 html: [vars.devScriptsPath + "**/*.html"], //Look for html templates
                 reference: vars.devScriptsPath + "definitions/references.d.ts", //Create reference file
                 src: [
