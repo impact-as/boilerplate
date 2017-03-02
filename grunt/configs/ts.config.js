@@ -17,7 +17,6 @@ module.exports = function (grunt) {
                 html: [vars.devScriptsPath + "**/*.html"], //Look for html templates
                 reference: vars.devScriptsPath + "definitions/references.d.ts", //Create reference file
                 src: [
-                    vars.devScriptsPath + "definitions/references.d.ts",
                     vars.devScriptsPath + "**/*.ts"
                 ], //Paths for .ts and .d.ts files
                 out: vars.distScriptsPath + vars.siteName + ".ts.js" //dist file
@@ -30,6 +29,7 @@ module.exports = function (grunt) {
                     vars.devScriptsPath + "**/*.ts",
                     vars.devScriptsPath + "**/*.html",
                     "!" + vars.devScriptsPath + "**/*.html.ts",
+                    "!" + vars.devScriptsPath + "definitions/references.d.ts"
                 ],
                 tasks: ["ts:all"],
                 options: {
