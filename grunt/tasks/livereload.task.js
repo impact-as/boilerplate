@@ -32,10 +32,32 @@ module.exports = function (grunt, taskConfigs) {
         }
     };
 
+    /**
+     * Pull out watch tasks to register with grunt-concurrent
+     * @author JOV
+     */
+    let concurrentTasks = [];
+    for (let task in taskConfigs.watch) {
+        if (task !== "options") {
+            concurrentTasks.push("watch:" + task);
+        }
+    }
+
+    //Add concurrent config to the taskConfigs object
+    taskConfigs.concurrent = {
+        watch: {
+            options: {
+                limit: concurrentTasks.length,
+                logConcurrentOutput: true
+            },
+            tasks: concurrentTasks
+        }
+    };
+
     //Register livereload-enabled watch-task.
     grunt.registerTask("livereload", () => {
         enableWrapper();
-        grunt.task.run(["watch"]);
+        grunt.task.run(["concurrent:watch"]);
     });
 
     //Register task to allow other tasks to modify wrapper on build (i.e. ensure file exists to avoid 404 in browser).
