@@ -2,7 +2,7 @@
  * @see https://github.com/TypeStrong/grunt-ts
  * @see https://github.com/gruntjs/grunt-contrib-watch
  */
-module.exports = function () {
+module.exports = function (grunt) {
     const vars = require("../settings/vars.setting");
 
     return {
@@ -12,13 +12,8 @@ module.exports = function () {
                 htmlOutputTemplate: "namespace Templates { export const <%= modulename %> = '<%= content %>'; }" //Export template as a string inside the "Templates" namespace.
             },
             all: {
-                tsconfig: {
-                    overwriteFilesGlob: true,
-                    updateFiles: false, //False because ignoreFiles doesn't work.
-                    ignoreFiles: true, //Not actually implemented in module code (I've checked)
-                    ignoreSettings: false,
-                    passThrough: false
-                },
+                tsconfig: false,
+                options: grunt.file.readJSON("tsconfig.json"),
                 html: [vars.devScriptsPath + "**/*.html"], //Look for html templates
                 reference: vars.devScriptsPath + "definitions/references.d.ts", //Create reference file
                 src: [

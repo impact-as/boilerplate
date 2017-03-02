@@ -10,9 +10,5 @@
         "pretty": true,
         "removeComments": false,
         "target": "es5"
-    },
-    "filesGlob": [
-        "dev/scripts/definitions/references.d.ts",
-        "dev/scripts/**/*.ts"
-    ]
+    }
 }
