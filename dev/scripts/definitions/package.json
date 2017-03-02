@@ -9,7 +9,7 @@
   "author": "MAC",
   "license": "ISC",
   "dependencies": {
-    "@types/angular": "^1.6.2"
+    "@types/angular": "1.6.2"
   },
   "private": true
 }
